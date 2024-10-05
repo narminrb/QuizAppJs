@@ -1,4 +1,4 @@
-const nums = [1, 2, 3, 4, 5, 2]; 
+const nums = [1, 2, 3, 4, 5]; 
 let hasDuplicates = false;
 let i = 0;
 let length = nums.length;
