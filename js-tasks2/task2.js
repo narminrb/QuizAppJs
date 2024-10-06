@@ -1,21 +1,27 @@
-const nums = [1, 2, 3, 4, 5]; 
-let hasDuplicates = false;
-let i = 0;
-let length = nums.length;
+function checkForDuplicates(nums) {
+    let hasDuplicates = false;
+    let length = nums.length;
+    let i = 0;
 
-while (i < length) {
-    let j = i + 1; 
-    while (j < length) {
-        if (nums[i] === nums[j]) {
-            hasDuplicates = true; 
-            break; 
+    while (i < length) {
+        let j = i + 1; 
+        while (j < length) {
+            if (nums[i] === nums[j]) {
+                hasDuplicates = true; 
+                break;  
+            }
+            j++;
         }
-        j++;
+        if (hasDuplicates) {
+            break;  
+        }
+        i++;
     }
-    if (hasDuplicates) {
-        break; 
-    }
-    i++;
+
+    return hasDuplicates;   
 }
 
-console.log(hasDuplicates); 
+
+const nums = [1, 2, 3, 4, 5];
+console.log(checkForDuplicates(nums));  
+
